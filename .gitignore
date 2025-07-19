@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Local configuration
+.env
+config.yaml
+
+# Resume files (should be added manually)
+*.pdf
+*.docx
+*.doc
+
+# Selenium
+geckodriver.log
+chromedriver.log
+
+# Application data
+application_history.json
+
+# Mac OS
+.DS_Store

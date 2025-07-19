@@ -49,9 +49,12 @@ jobs:
         registry: ghcr.io
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
+    - name: Convert repository name to lowercase
+      id: repo_name
+      run: echo "REPO_NAME=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
     - name: Build and push
       uses: docker/build-push-action@v4
       with:
         context: .
         push: true
-        tags: ghcr.io/${{ github.repository_owner | lower }}/linkedin-job-mcp-server:latest
+        tags: ghcr.io/${{ env.REPO_NAME }}/linkedin-job-mcp-server:latest
